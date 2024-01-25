@@ -1,1 +1,2 @@
 C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\LCV2242552\Desktop\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
