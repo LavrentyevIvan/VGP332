@@ -1,5 +1,6 @@
 #include "TileMap.h"
 #include <XEngine.h> // <> for external includes, "" for internal includes
+#include <ImGui/Inc/imgui.h>
 
 TileMap tileMap;
 X::TextureId textureId;
@@ -21,8 +22,19 @@ bool GameLoop(float deltaTime)
 	const float moveSpeed = 200.0f; // pixel per second
 	if (X::IsKeyDown(X::Keys::RIGHT))
 		position.x += moveSpeed * deltaTime;
+	else if (X::IsKeyDown(X::Keys::LEFT))
+		position.x -= moveSpeed * deltaTime;
 	if (X::IsKeyDown(X::Keys::DOWN))
 		position.y += moveSpeed * deltaTime;
+	else if (X::IsKeyDown(X::Keys::UP))
+		position.y -= moveSpeed * deltaTime;
+
+	ImGui::Begin("Pathfinding", nullptr, ImGuiWindowFlags_AlwaysAutoResize); {
+		int test = 0;
+		ImGui::DragInt("TestValue", &test);
+		ImGui::Button("Press");
+	}
+	ImGui::End();
 
 	tileMap.Render();
 
