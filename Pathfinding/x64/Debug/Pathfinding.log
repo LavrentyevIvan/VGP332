@@ -1,5 +1,1 @@
-﻿  TileMap.cpp
-  WinMain.cpp
-  Generating Code...
-     Creating library C:\Users\LCV2242552\Desktop\VGP332\x64\Debug\Pathfinding.lib and object C:\Users\LCV2242552\Desktop\VGP332\x64\Debug\Pathfinding.exp
-  Pathfinding.vcxproj -> C:\Users\LCV2242552\Desktop\VGP332\x64\Debug\Pathfinding.exe
+﻿LINK : fatal error LNK1104: cannot open file 'C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\x64\Debug\AI.lib'

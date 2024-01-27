@@ -9,24 +9,48 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AI.h">
+    <ClInclude Include="Inc\GridBasedGraph.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Common.h">
+    <ClInclude Include="Inc\AI.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Precompiled.h">
+    <ClInclude Include="Inc\Common.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Precompiled.h">
       <Filter>Src</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\GridBasedGraph.h">
+    <ClInclude Include="Inc\DFS.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Dijkstra.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\BFS.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AStar.h">
       <Filter>Inc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Precompiled.cpp">
+    <ClCompile Include="Src\GridBasedGraph.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\GridBasedGraph.cpp">
+    <ClCompile Include="Src\Precompiled.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AStar.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DFS.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dijkstra.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BFS.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
