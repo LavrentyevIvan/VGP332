@@ -275,6 +275,58 @@ Path TileMap::FindPathDijkstra(int startX, int startY, int endX, int endY)
 	}
 	return path;
 }
+Path TileMap::FindPathAStar(int startX, int startY, int endX, int endY)
+{
+	auto getCost = [](const GridBasedGraph::Node* node, const GridBasedGraph::Node* neightbor)
+		{
+			if (node->column != neightbor->column && node->row != neightbor->row)
+			{
+				return 5.0f;
+			}
+			return 1.0f;
+		};
+	auto manhattanHeuristic = [](const GridBasedGraph::Node* neighbor, const GridBasedGraph::Node* endNode)
+		{
+			float D = 1.0f;
+			float dx = abs(neighbor->column - endNode->column);
+			float dy = abs(neighbor->row - endNode->row);
+			return D * (dx + dy);
+
+
+		};
+	auto euclidianHeuristic = [](const GridBasedGraph::Node* neighbor, const GridBasedGraph::Node* endNode)
+		{
+			float D = 1.0f;
+			float dx = abs(neighbor->column - endNode->column);
+			float dy = abs(neighbor->row - endNode->row);
+			return D * sqrt(dx * dx + dy * dy);
+		};
+	auto diagonalHeuristic = [](const GridBasedGraph::Node* neighbor, const GridBasedGraph::Node* endNode)
+		{
+			float D = 1.0f;
+			float D2 = 1.0f;
+			float dx = abs(neighbor->column - endNode->column);
+			float dy = abs(neighbor->row - endNode->row);
+			return D * (dx + dy )+(D2 - 2 *D)*std::min(dx,dy);
+		};
+
+	Path path;
+	AStar astar;
+
+	if (astar.Run(mGraph, startX, startY, endX, endY, getCost, manhattanHeuristic))
+	{
+		const NodeList& closedList = astar.GetClosedList();
+
+		GridBasedGraph::Node* node = closedList.back();
+		while (node != nullptr)
+		{
+			path.push_back(GetPixelPosition(node->column, node->row));
+			node = node->parent;
+		}
+		std::reverse(path.begin(), path.end());
+	}
+	return path;
+}
 //How to convert a 2d array into a 1d array.
 
 // 2D map - 5 columns x 4 rows

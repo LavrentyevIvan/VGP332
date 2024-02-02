@@ -62,6 +62,10 @@ bool GameLoop(float deltaTime)
 		{
 			path = tileMap.FindPathDijkstra(startX, startY, endX, endY);
 		}
+		if (ImGui::Button("RunAStar"))
+		{
+			path = tileMap.FindPathAStar(startX, startY, endX, endY);
+		}
 
 	}
 

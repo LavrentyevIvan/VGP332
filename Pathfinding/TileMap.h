@@ -31,6 +31,7 @@ public:
 	Path FindPathBFS(int startX, int startY, int endX, int endY);
 	Path FindPathDFS(int startX, int startY, int endX, int endY);
 	Path FindPathDijkstra(int startX, int startY, int endX, int endY);
+	Path FindPathAStar(int startX, int startY, int endX, int endY);
 
 private:
 
