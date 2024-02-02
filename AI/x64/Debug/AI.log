@@ -1,8 +1,19 @@
-﻿  Entity.cpp
+﻿  Precompiled.cpp
+  AIWorld.cpp
+C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+  (compiling source file '/Src/AIWorld.cpp')
+  
+  AStar.cpp
+  BFS.cpp
+  DFS.cpp
+  Dijkstra.cpp
+  Entity.cpp
 C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
   (compiling source file '/Src/Entity.cpp')
   
 C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Src\Entity.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file '/Src/Entity.cpp')
   
+  GridBasedGraph.cpp
+  Generating Code...
   AI.vcxproj -> C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\AI.lib

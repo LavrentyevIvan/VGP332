@@ -12,10 +12,6 @@ C:\Users\LCV2242552\Documents\GitHub\VGP332\Steering\WinMain.cpp(17,26): warning
 C:\Users\LCV2242552\Documents\GitHub\VGP332\Steering\WinMain.cpp(18,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
 C:\Users\LCV2242552\Documents\GitHub\VGP332\Steering\WinMain.cpp(18,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
   Generating Code...
-C:\Users\LCV2242552\Documents\GitHub\VGP332\Steering\WinMain.cpp(65): warning C4715: 'GameLoop': not all control paths return a value
+C:\Users\LCV2242552\Documents\GitHub\VGP332\Steering\WinMain.cpp(68): warning C4715: 'GameLoop': not all control paths return a value
      Creating library C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\Steering.lib and object C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\Steering.exp
-SCV.obj : error LNK2019: unresolved external symbol "public: __cdecl AI::Entity::Entity(class AI::AIWorld &,unsigned int)" (??0Entity@AI@@QEAA@AEAVAIWorld@1@I@Z) referenced in function "public: __cdecl AI::Agent::Agent(class AI::AIWorld &,unsigned int)" (??0Agent@AI@@QEAA@AEAVAIWorld@1@I@Z)
-SCV.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl AI::Entity::~Entity(void)" (??1Entity@AI@@UEAA@XZ) referenced in function "int `public: __cdecl AI::Agent::Agent(class Agent::AIWorld &,unsigned int)'::`1'::dtor$0" (?dtor$0@?0???0Agent@AI@@QEAA@AEAVAIWorld@1@I@Z@4HA)
-WinMain.obj : error LNK2019: unresolved external symbol "public: void __cdecl AI::AIWorld::Initialize(void)" (?Initialize@AIWorld@AI@@QEAAXXZ) referenced in function "void __cdecl GameInit(void)" (?GameInit@@YAXXZ)
-WinMain.obj : error LNK2019: unresolved external symbol "public: void __cdecl AI::AIWorld::Update(void)" (?Update@AIWorld@AI@@QEAAXXZ) referenced in function "bool __cdecl GameLoop(float)" (?GameLoop@@YA_NM@Z)
-C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\Steering.exe : fatal error LNK1120: 4 unresolved externals
+  Steering.vcxproj -> C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\Steering.exe

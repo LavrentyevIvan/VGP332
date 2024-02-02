@@ -2,9 +2,12 @@
 
 #include "Common.h"
 
+//Steering
 #include "Agent.h"
 #include "AIWorld.h"
 #include "Entity.h"
+#include "SteeringBehaviour.h"
+#include "SteeringModule.h"
 
 #include "GridBasedGraph.h"
 
