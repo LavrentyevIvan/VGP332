@@ -151,6 +151,8 @@
     <ClInclude Include="Inc\Dijkstra.h" />
     <ClInclude Include="Inc\Entity.h" />
     <ClInclude Include="Inc\GridBasedGraph.h" />
+    <ClInclude Include="Inc\State.h" />
+    <ClInclude Include="Inc\StateMachine.h" />
     <ClInclude Include="Inc\SteeringBehaviour.h" />
     <ClInclude Include="Inc\SteeringModule.h" />
     <ClInclude Include="Src\Precompiled.h" />

@@ -16,3 +16,7 @@
 #include "DFS.h"
 #include "Dijkstra.h"
 #include "AStar.h"
+
+//FSM
+#include "State.h"
+#include "StateMachine.h"

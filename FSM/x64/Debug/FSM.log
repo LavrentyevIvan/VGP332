@@ -1,0 +1,105 @@
+﻿  Guitar.cpp
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2059: syntax error: '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2143: syntax error: missing ';' before '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2238: unexpected token(s) preceding ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(13,1): error C2059: syntax error: ')'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(14,11): error C2853: 'newBehaviour': a non-static data member cannot have a type that contains 'auto'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(15,5): error C2059: syntax error: 'return'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(15,58): error C2238: unexpected token(s) preceding ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): error C2187: syntax error: ')' was unexpected here
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): error C3878: syntax error: unexpected token ')' following 'static_assert_declaration'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): message : error recovery skipped: ') ,'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(13,1): error C2760: syntax error: '}' was unexpected here; expected ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(18,2): error C2059: syntax error: 'private'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(18,9): error C2059: syntax error: ':'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(19,16): error C2530: 'AI::mAgent': references must be initialized
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(22,1): error C2059: syntax error: '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(22,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\GridBasedGraph.h(4,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\GridBasedGraph.h(4,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,29): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,45): error C2065: 'Node': undeclared identifier
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,50): error C2059: syntax error: '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(13,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\DFS.h(11,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,44): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,38): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,38): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,73): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,37): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(12,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,44): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,38): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,38): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,73): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,37): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,49): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,43): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,43): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,78): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,42): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(14,12): error C2061: syntax error: identifier 'GridBasedGraph'
+  WinMain.cpp
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2059: syntax error: '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2143: syntax error: missing ';' before '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Agent.h(18,2): error C2238: unexpected token(s) preceding ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(13,1): error C2059: syntax error: ')'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(14,11): error C2853: 'newBehaviour': a non-static data member cannot have a type that contains 'auto'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(15,5): error C2059: syntax error: 'return'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(15,58): error C2238: unexpected token(s) preceding ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): error C2187: syntax error: ')' was unexpected here
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): error C3878: syntax error: unexpected token ')' following 'static_assert_declaration'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(12,67): message : error recovery skipped: ') ,'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(13,1): error C2760: syntax error: '}' was unexpected here; expected ';'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(11,17): message : This diagnostic occurred in the compiler generated function 'NewBehaviour *AI::SteeringModule::AddBehaviour(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(18,2): error C2059: syntax error: 'private'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(18,9): error C2059: syntax error: ':'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(19,16): error C2530: 'AI::mAgent': references must be initialized
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(22,1): error C2059: syntax error: '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\SteeringModule.h(22,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\GridBasedGraph.h(4,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\GridBasedGraph.h(4,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,29): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,45): error C2065: 'Node': undeclared identifier
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(8,50): error C2059: syntax error: '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\BFS.h(13,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\DFS.h(11,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,44): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,38): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,38): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,73): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(7,37): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\Dijkstra.h(12,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,44): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,38): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,38): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,73): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(8,37): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,49): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,43): error C2143: syntax error: missing ')' before 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,43): error C2059: syntax error: 'const'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,78): error C2653: 'GridBasedGraph': is not a class or namespace name
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(9,42): error C2947: expecting '>' to terminate template-argument-list, found '>'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\AStar.h(14,12): error C2061: syntax error: identifier 'GridBasedGraph'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\StateMachine.h(32,4): warning C4002: too many arguments for function-like macro invocation 'assert'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\FSM\WinMain.cpp(7,8): error C2280: 'Guitar::Guitar(void)': attempting to reference a deleted function
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\FSM\Guitar.h(21,2): message : see declaration of 'Guitar::Guitar'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\FSM\Guitar.h(21,2): message : 'Guitar::Guitar(void)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'AI::StateMachine<Guitar>::StateMachine(void)'
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\StateMachine.h(10,3): message : 'AI::StateMachine<Guitar>::StateMachine(void)': function was implicitly deleted because 'AI::StateMachine<Guitar>' has an uninitialized data member 'AI::StateMachine<Guitar>::mAgent' of reference type
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\AI\Inc\StateMachine.h(51,14): message : see declaration of 'AI::StateMachine<Guitar>::mAgent'
+  Generating Code...

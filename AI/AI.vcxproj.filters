@@ -7,11 +7,23 @@
     <Filter Include="Src">
       <UniqueIdentifier>{5894cb29-59d6-44f5-828b-ce7bdb6d92e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\Pathing">
+      <UniqueIdentifier>{a8c51ea7-53ac-4ff4-a951-e293e629eaea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Steering">
+      <UniqueIdentifier>{ec45b6c0-9712-4dce-ac5e-6c30ccd6c61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Steering">
+      <UniqueIdentifier>{c4873db6-8703-4520-bb1d-8db0b8d4a7a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Pathing">
+      <UniqueIdentifier>{fc20c700-c648-4408-bb1c-9754bfeb5f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\FSM">
+      <UniqueIdentifier>{5cb64aa2-2173-408b-9c84-6e724ccb1e8b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Inc\GridBasedGraph.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\AI.h">
       <Filter>Inc</Filter>
     </ClInclude>
@@ -21,59 +33,70 @@
     <ClInclude Include="Src\Precompiled.h">
       <Filter>Src</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\DFS.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\Dijkstra.h">
-      <Filter>Inc</Filter>
+    <ClInclude Include="Inc\AStar.h">
+      <Filter>Inc\Pathing</Filter>
     </ClInclude>
     <ClInclude Include="Inc\BFS.h">
-      <Filter>Inc</Filter>
+      <Filter>Inc\Pathing</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\AStar.h">
-      <Filter>Inc</Filter>
+    <ClInclude Include="Inc\DFS.h">
+      <Filter>Inc\Pathing</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Entity.h">
-      <Filter>Inc</Filter>
+    <ClInclude Include="Inc\Dijkstra.h">
+      <Filter>Inc\Pathing</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\AIWorld.h">
-      <Filter>Inc</Filter>
+    <ClInclude Include="Inc\GridBasedGraph.h">
+      <Filter>Inc\Pathing</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Agent.h">
-      <Filter>Inc</Filter>
+      <Filter>Inc\Steering</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\SteeringBehaviour.h" />
+    <ClInclude Include="Inc\Entity.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
     <ClInclude Include="Inc\SteeringModule.h">
-      <Filter>Inc</Filter>
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIWorld.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour.h">
+      <Filter>Src\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\State.h">
+      <Filter>Inc\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\StateMachine.h">
+      <Filter>Inc\FSM</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\GridBasedGraph.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Precompiled.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\AStar.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\DFS.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Dijkstra.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\BFS.cpp">
-      <Filter>Src</Filter>
+    <ClCompile Include="Src\AIWorld.cpp">
+      <Filter>Src\Steering</Filter>
     </ClCompile>
     <ClCompile Include="Src\Entity.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\AIWorld.cpp">
-      <Filter>Src</Filter>
+      <Filter>Src\Steering</Filter>
     </ClCompile>
     <ClCompile Include="Src\SteeringModule.cpp">
-      <Filter>Src</Filter>
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AStar.cpp">
+      <Filter>Src\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BFS.cpp">
+      <Filter>Src\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DFS.cpp">
+      <Filter>Src\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dijkstra.cpp">
+      <Filter>Src\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GridBasedGraph.cpp">
+      <Filter>Src\Pathing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
