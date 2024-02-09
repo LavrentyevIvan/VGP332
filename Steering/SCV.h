@@ -16,6 +16,7 @@ public:
 	void ShowDebug(bool debug);
 
 private:
+	std::unique_ptr<AI::SteeringModule> mSteeringModule;
 	std::array<X::TextureId, 16> mTextureIds;
 
 };

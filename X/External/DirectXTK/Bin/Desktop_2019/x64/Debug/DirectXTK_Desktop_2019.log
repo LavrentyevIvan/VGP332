@@ -16,7 +16,7 @@
   EffectFactory.cpp
   EnvironmentMapEffect.cpp
   GamePad.cpp
-C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\X\External\DirectXTK\Src\GamePad.cpp(22,21): warning C5264: '`anonymous-namespace'::c_XboxOneThumbDeadZone': 'const' variable is not used
+C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Src\GamePad.cpp(22,21): warning C5264: '`anonymous-namespace'::c_XboxOneThumbDeadZone': 'const' variable is not used
   GeometricPrimitive.cpp
   Geometry.cpp
   GraphicsMemory.cpp
@@ -41,4 +41,4 @@ C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\X\External\DirectXTK\S
   VertexTypes.cpp
   WICTextureLoader.cpp
   Generating Code...
-  DirectXTK_Desktop_2019.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib
+  DirectXTK_Desktop_2019.vcxproj -> C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Bin\Desktop_2019\x64\Debug\DirectXTK.lib

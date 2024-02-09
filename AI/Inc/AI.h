@@ -8,6 +8,8 @@
 #include "Entity.h"
 #include "SteeringBehaviour.h"
 #include "SteeringModule.h"
+#include "SeekBehaviour.h"
+#include "SteeringModule.h"
 
 #include "GridBasedGraph.h"
 

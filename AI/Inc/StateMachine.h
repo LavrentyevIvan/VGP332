@@ -45,7 +45,7 @@ namespace AI
 		}
 		void DebugUI() {
 			if (mCurrentState != nullptr) {
-				mCurrentState->DebugUI;
+				mCurrentState->DebugUI();
 			}
 		}
 

@@ -69,6 +69,13 @@ bool GameLoop(float deltaTime)
 
 void GameCleanup()
 {
+	for (auto& agent : scvAgents)
+	{
+		agent->Unload();
+		agent.reset();
+	}
+	scvAgents.clear();
+
 }
 
 //--------------------------------------------------

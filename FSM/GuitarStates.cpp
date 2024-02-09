@@ -8,7 +8,6 @@ void TakeABreakState::Enter(Guitar& agent)
 
 void TakeABreakState::Update(Guitar& agent, float deltaTime)
 {
-	agent.ResetRest();
 	if (!agent.IsRested()) {
 		if (!agent.IsFamous()) 
 		{
