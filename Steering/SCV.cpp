@@ -9,9 +9,10 @@ SCV::SCV(AI::AIWorld& world)
 void SCV::Load()
 {
 	mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
-	AI::SeekBehaviour* seek = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
-	seek->SetActive(true);
-	seek->ShowDebug(true);
+	mSeekBehaviour = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
+	mFleeBehaviour = mSteeringModule->AddBehaviour<AI::FleeBehaviour>();
+
+	
 
 	const float screenWidth = static_cast<float>(X::GetScreenWidth());
 	const float screenHeight = static_cast<float>(X::GetScreenHeight());
@@ -75,4 +76,17 @@ void SCV::Render()
 
 void SCV::ShowDebug(bool debug)
 {
+	mSeekBehaviour->ShowDebug(debug);
+	mFleeBehaviour->ShowDebug(debug);
+
+}
+
+void SCV::SetSeek(bool active)
+{
+	mSeekBehaviour->SetActive(active);
+}
+void SCV::SetFlee(bool active)
+{
+	mFleeBehaviour->SetActive(active);
+
 }

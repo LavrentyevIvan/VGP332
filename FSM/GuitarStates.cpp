@@ -8,7 +8,8 @@ void TakeABreakState::Enter(Guitar& agent)
 
 void TakeABreakState::Update(Guitar& agent, float deltaTime)
 {
-	if (!agent.IsRested()) {
+	agent.ResetRest();
+	if (agent.IsRested()) {
 		if (!agent.IsFamous()) 
 		{
 			agent.ChangeState(GuitarState::HostAConcert);
@@ -43,7 +44,7 @@ void HostAConcertState::Update(Guitar& agent, float deltaTime)
 	if (agent.IsCapacityReached()) {
 		agent.ChangeState(GuitarState::PostOnSocials);
 	}
-	else if (agent.IsHungry()) {
+  	else if (agent.IsHungry()) {
 		agent.ChangeState(GuitarState::VisitRestaraunt);
 	}
 }

@@ -48,17 +48,17 @@ Location Guitar::GetLocation() const
 
 bool Guitar::IsHungry() const
 {
-	return gHunger >= 5;
+	return gHunger > 5;
 }
 
 bool Guitar::IsCapacityReached() const
 {
-	return gFansGained >= 100;
+	return gFansGained > 1000;
 }
 
 bool Guitar::IsFamous() const
 {
-	return gSocialsFans >= 1000;
+	return gSocialsFans > 5000;
 }
 
 bool Guitar::IsRested() const
