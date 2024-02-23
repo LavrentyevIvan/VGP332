@@ -151,11 +151,14 @@
     <ClInclude Include="Inc\Dijkstra.h" />
     <ClInclude Include="Inc\Entity.h" />
     <ClInclude Include="Inc\GridBasedGraph.h" />
+    <ClInclude Include="Inc\GroupBehaviour.h" />
+    <ClInclude Include="Inc\PursuitBehaviour.h" />
     <ClInclude Include="Inc\SeekBehaviour.h" />
     <ClInclude Include="Inc\State.h" />
     <ClInclude Include="Inc\StateMachine.h" />
     <ClInclude Include="Inc\SteeringBehaviour.h" />
     <ClInclude Include="Inc\SteeringModule.h" />
+    <ClInclude Include="Inc\WanderBehaviour.h" />
     <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,12 +169,15 @@
     <ClCompile Include="Src\Dijkstra.cpp" />
     <ClCompile Include="Src\Entity.cpp" />
     <ClCompile Include="Src\GridBasedGraph.cpp" />
+    <ClCompile Include="Src\GroupBehaviour.cpp" />
     <ClCompile Include="Src\Precompiled.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Src\PursuitBehaviour.cpp" />
     <ClCompile Include="Src\SeekBehaviour.cpp" />
     <ClCompile Include="Src\SteeringModule.cpp" />
+    <ClCompile Include="Src\WanderBehaviour.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

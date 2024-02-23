@@ -1,13 +1,8 @@
-﻿  SCV.cpp
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-  WinMain.cpp
+﻿  WinMain.cpp
 C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
 C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(23,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(23,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(24,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(24,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-  Generating Code...
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(104): warning C4715: 'GameLoop': not all control paths return a value
-     Creating library C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\x64\Debug\Steering.lib and object C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\x64\Debug\Steering.exp
+C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(43,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(43,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(44,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\Steering\WinMain.cpp(44,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
   Steering.vcxproj -> C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\x64\Debug\Steering.exe

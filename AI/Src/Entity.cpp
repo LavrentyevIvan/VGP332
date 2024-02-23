@@ -29,6 +29,5 @@ X::Math::Matrix3 AI::Entity::GetWorldTransform() const
 		s.x, s.y, 0.0f,
 		h.x, h.y, 0.0f,
 		d.x, d.y, 1.0f
-
 	};
 }

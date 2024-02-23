@@ -10,6 +10,10 @@
 #include "SteeringModule.h"
 #include "SeekBehaviour.h"
 #include "SteeringModule.h"
+#include "WanderBehaviour.h"
+#include "PursuitBehaviour.h"
+#include "GroupBehaviour.h"
+
 
 #include "GridBasedGraph.h"
 

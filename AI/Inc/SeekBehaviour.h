@@ -16,4 +16,17 @@ namespace AI
 
 		float panicDistance = 100.0f;
 	};
+	class ArriveBehaviour : public SteeringBehaviour
+	{
+	public:
+		enum class Deceleration {
+			Fast,
+			Normal,
+			Slow
+		};
+
+		X::Math::Vector2 Calculate(Agent& agent) override;
+
+		Deceleration deceleration = Deceleration::Normal;
+	};
 }

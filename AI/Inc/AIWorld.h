@@ -14,6 +14,8 @@ namespace AI {
 		
 		
 		EntityPtrs GetEntities() const { return mEntities; }
+
+		EntityPtrs GetEntitiesInRAnge(const X::Math::Circle& range, uint32_t typeId);
 	
 		uint32_t GetNextId() const {
 			XASSERT(mNextId < UINT32_MAX, "AIWorld: ran out of ids");
