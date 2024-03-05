@@ -26,3 +26,8 @@
 //FSM
 #include "State.h"
 #include "StateMachine.h"
+
+// Perception
+#include "MemoryRecord.h"
+#include "PerceptionModule.h"
+#include "Sensor.h"
