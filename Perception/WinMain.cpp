@@ -31,6 +31,9 @@ float wanderRadius = 20.0f;
 float wanderDistance = 50.0f;
 float radius = 50.0f;
 
+float viewRange = 300.0f;
+float viewAngle = 45.0f;
+
 float weightSeek = 0.1f;
 float weightFlee = 0.1f;
 float weightArrive = 0.1f;
@@ -244,6 +247,11 @@ bool GameLoop(float deltaTime)
 			{
 				agent->SetCohesionWeight(weightCohesion);
 			}
+		}
+		if (ImGui::CollapsingHeader("VisualSensor", ImGuiTreeNodeFlags_DefaultOpen))
+		{
+			ImGui::DragFloat("ViewRange", &viewRange, 1.0f, 100.0f, 1000.0f);
+			ImGui::DragFloat("ViewAngle", &viewAngle, 1.0f, 1.0f, 360.0f);
 		}
 	}
 

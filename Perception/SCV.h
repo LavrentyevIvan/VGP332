@@ -1,6 +1,7 @@
 #pragma once
 
 #include <AI.h>
+class VisualSensor;
 
 class SCV : public AI::Agent {
 public:
@@ -37,6 +38,9 @@ private:
 	std::unique_ptr<AI::PerceptionModule> mPerceptionModule;
 
 	std::unique_ptr<AI::SteeringModule> mSteeringModule;
+	VisualSensor* mVisualSensor = nullptr;
+
+
 	AI::SeekBehaviour* mSeekBehaviour = nullptr;
 	AI::FleeBehaviour* mFleeBehaviour = nullptr;
 	AI::ArriveBehaviour* mArriveBehaviour = nullptr;

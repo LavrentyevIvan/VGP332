@@ -39,9 +39,42 @@ void VisualSensor::Update(AI::Agent& agent, AI::MemoryRecords& memory, float del
 		//Line of Sight
 
 		//have I seen this before
-		auto iter = std::find_if(memory.begin(), memory.end(), [](const MemoryRecords& m)
+		auto iter = std::find_if(memory.begin(), memory.end(),
+			[&](const MemoryRecord& m)
 			{
-				return entity->GetUniqueId() == m.
+				return entity->GetUniqueId() == m.uniqueId;
 			});
+
+		if (iter != memory.end())
+		{
+			iter->properties["lastSeenPosition"] = entity->position;
+			iter->lastRecordedTime = X::GetTime();
+
+		}
+		else
+		{
+			auto& newRecord = memory.emplace_back();
+			newRecord.uniqueId = entity->GetUniqueId();
+			newRecord.properties["lastSeenPosition"] = entity->position;
+			newRecord.properties["type"] = static_cast<int>(entity->GetTypeId());
+			newRecord.lastRecordedTime = X::GetTime();
+		}
+
 	}
+	//debug info
+
+	X::Math::Vector2 fovStart = X::Math::Rotate(agent.heading * viewRange, -viewHalfAngle);
+	X::Math::Vector2 fovEnd = X::Math::Rotate(agent.heading * viewRange, viewHalfAngle);
+	X::DrawScreenLine(agent.position, agent.position + fovStart, X::Colors::Cyan);
+	X::DrawScreenLine(agent.position, agent.position + fovEnd, X::Colors::Cyan);
+
+	float angle = atan2(agent.heading.y, agent.heading.x);
+	X::DrawScreenArc(agent.position, viewRange, angle - viewHalfAngle, angle + viewHalfAngle, X::Colors::Cyan);
+
+
+
+
+
+
+
 }

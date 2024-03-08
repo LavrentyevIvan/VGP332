@@ -2,6 +2,7 @@
 
 #include <AI.h>
 
+
 class SCV : public AI::Agent {
 public:
 	SCV(AI::AIWorld& world);
