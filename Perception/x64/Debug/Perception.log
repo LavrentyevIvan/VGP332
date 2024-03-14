@@ -1,6 +1,11 @@
 ﻿  SCV.cpp
-C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-  VisualSensor.cpp
-C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+  WinMain.cpp
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\Perception\WinMain.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\Perception\WinMain.cpp(52,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\Perception\WinMain.cpp(52,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\Perception\WinMain.cpp(53,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\Perception\WinMain.cpp(53,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
   Generating Code...
-  Perception.vcxproj -> C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\Perception.exe
+  Perception.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\x64\Debug\Perception.exe

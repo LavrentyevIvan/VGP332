@@ -13,11 +13,37 @@ namespace
 {
 	float ComputeImportance(const AI::Agent& agent, const AI::MemoryRecord& record) 
 	{
-		X::Math::Vector2 lastSeenPos = record.GetProperty<X::Math::Vector2>("lastSeenPosition");
-		float distance = X::Math::Distance(agent.position, lastSeenPos);
-		float distanceScore = std::max(1000.0f - distance, 0.0f);
+		float score = 0.0f;
+		AgentType entityType = static_cast<AgentType>(record.GetProperty<int>("type"));
+		switch (entityType)
+		{
+		case AgentType::Invalid:
+		{
+			score = 0.0f;
+			break;
+		}
+		case AgentType::SCV:
+		{
+			X::Math::Vector2 lastSeenPos = record.GetProperty<X::Math::Vector2>("lastSeenPosition");
+			float distance = X::Math::Distance(agent.position, lastSeenPos);
+			float distanceScore = std::max(500.0f - distance, 0.0f);
+			score = distanceScore;
+			break;
+		}
+		case AgentType::Mineral:
+		{
+			X::Math::Vector2 lastSeenPos = record.GetProperty<X::Math::Vector2>("lastSeenPosition");
+			float distance = X::Math::Distance(agent.position, lastSeenPos);
+			float distanceScore = std::max(1000.0f - distance, 0.0f);
+			score = distanceScore;
+			break;
+		}
+			default:
+			break;
 
-		return distanceScore;
+		}
+		return 0.0f;
+
 	}
 }
 
@@ -67,6 +93,7 @@ void SCV::Update(float deltatime)
 {
 	mVisualSensor->viewRange = viewRange;
 	mVisualSensor->viewHalfAngle = viewAngle * X::Math::kDegToRad;
+
 
 	mPerceptionModule->Update(deltatime);
 

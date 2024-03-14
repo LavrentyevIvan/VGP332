@@ -14,7 +14,7 @@ using namespace AI;
 AIWorld aiWorld;
 std::vector<std::unique_ptr<SCV>> scvAgents;
 std::vector<std::unique_ptr<Mineral>> minerals;
-SCV target(aiWorld);
+
 
 X::Math::Vector2 destination = X::Math::Vector2::Zero();
 
@@ -81,8 +81,6 @@ void KillAgent()
 void GameInit()
 {
 	aiWorld.Initialize();
-	target.Load();
-	//target.SetWander(true);
 
 	for (uint32_t i = 0; i < 10; ++i) 
 	{
@@ -279,13 +277,11 @@ bool GameLoop(float deltaTime)
 		}
 	}
 
-	target.Update(deltaTime);
 	
 	for (auto& agent : scvAgents) 
 	{
 		agent->Update(deltaTime);
 	}
-	target.Render();
 	for (auto& agent : scvAgents) 
 	{
 		agent->Render();
@@ -304,13 +300,17 @@ bool GameLoop(float deltaTime)
 
 void GameCleanup()
 {
-	//target.Unload();
 	for (auto& agent : scvAgents)
 	{
 		agent->Unload();
 		agent.reset();
 	}
+	for (auto& mineral : minerals)
+	{
+		mineral.reset();
+	}
 	scvAgents.clear();
+	minerals.clear();
 
 }
 

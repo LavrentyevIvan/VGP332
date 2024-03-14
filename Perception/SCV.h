@@ -36,9 +36,7 @@ public:
 
 private:
 	std::unique_ptr<AI::PerceptionModule> mPerceptionModule;
-
 	std::unique_ptr<AI::SteeringModule> mSteeringModule;
-	VisualSensor* mVisualSensor = nullptr;
 
 
 	AI::SeekBehaviour* mSeekBehaviour = nullptr;
@@ -50,6 +48,8 @@ private:
 	AI::AlignmentBehaviour* mAlignmentBehaviour = nullptr;
 	AI::CohesionBehaviour* mCohesionBehaviour = nullptr;
 	
+	VisualSensor* mVisualSensor = nullptr;
+
 
 	std::array<X::TextureId, 16> mTextureIds;
 

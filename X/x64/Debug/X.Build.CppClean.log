@@ -24,10 +24,35 @@ c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\camera.obj
 c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\audiosystem.obj
 c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\xmath.obj
 c:\users\lcv2242552\documents\github\vgp332\x64\debug\x.lib
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\cl.command.1.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\cl.items.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\cl.read.1.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\cl.write.1.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\lib-link.read.1.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\lib-link.write.1.tlog
-c:\users\lcv2242552\documents\github\vgp332\x\x64\debug\x.tlog\lib.command.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\audiosystem.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\camera.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\config.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\constantbuffer.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\font.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\graphicssystem.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\gui.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\inputsystem.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\pixelshader.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\precompiled.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\rendertarget.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\simpledraw.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\soundeffectmanager.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\spriterenderer.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\texture.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\texturemanager.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\timer.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\vertex.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\vertexshader.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\vertexutil.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\xengine.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\xmath.obj
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.pch
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x64\debug\x.pdb
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x64\debug\x.lib
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\cl.command.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\cl.items.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\cl.read.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\cl.write.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\lib-link.read.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\lib-link.write.1.tlog
+c:\users\ilavr\desktop\lasalle classes\2024-winter\vgp332\vgp332\x\x64\debug\x.tlog\lib.command.1.tlog

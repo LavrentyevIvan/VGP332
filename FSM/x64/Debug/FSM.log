@@ -1,9 +1,1 @@
-﻿  Guitar.cpp
-C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-  GuitarStates.cpp
-C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-  WinMain.cpp
-C:\Users\LCV2242552\Documents\GitHub\VGP332\AI\Inc\Entity.h(23,40): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-  Generating Code...
-     Creating library C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\FSM.lib and object C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\FSM.exp
-  FSM.vcxproj -> C:\Users\LCV2242552\Documents\GitHub\VGP332\x64\Debug\FSM.exe
+﻿
