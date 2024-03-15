@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FSM", "FSM\FSM.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Perception", "Perception\Perception.vcxproj", "{8F2F019C-8452-42B8-9318-4FEFB905A7B4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DecisionMaking", "DecisionMaking\DecisionMaking.vcxproj", "{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -117,6 +119,14 @@ Global
 		{8F2F019C-8452-42B8-9318-4FEFB905A7B4}.Release|x64.Build.0 = Release|x64
 		{8F2F019C-8452-42B8-9318-4FEFB905A7B4}.Release|x86.ActiveCfg = Release|Win32
 		{8F2F019C-8452-42B8-9318-4FEFB905A7B4}.Release|x86.Build.0 = Release|Win32
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Debug|x64.ActiveCfg = Debug|x64
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Debug|x64.Build.0 = Debug|x64
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Debug|x86.ActiveCfg = Debug|Win32
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Debug|x86.Build.0 = Debug|Win32
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Release|x64.ActiveCfg = Release|x64
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Release|x64.Build.0 = Release|x64
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Release|x86.ActiveCfg = Release|Win32
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,6 +142,7 @@ Global
 		{11A280DF-2C26-40C2-A585-DF667D223255} = {146A795E-C8E7-4258-9AD4-8E45F8B0F299}
 		{19B118C8-84D6-4C80-B13D-5394DF9B7C8B} = {146A795E-C8E7-4258-9AD4-8E45F8B0F299}
 		{8F2F019C-8452-42B8-9318-4FEFB905A7B4} = {146A795E-C8E7-4258-9AD4-8E45F8B0F299}
+		{C7A46866-2ABB-4D85-B0CB-9D0EDE79F825} = {146A795E-C8E7-4258-9AD4-8E45F8B0F299}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D84BED7-7031-4090-B4D3-57A9E4C0998B}
