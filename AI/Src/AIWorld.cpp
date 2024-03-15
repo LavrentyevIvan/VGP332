@@ -27,6 +27,38 @@ void AIWorld::Unregister(Entity* entity)
 	}
 }
 
+void AIWorld::AddObstacle(const X::Math::Circle& obstacle)
+{
+	mObstacles.push_back(obstacle);
+}
+
+void AIWorld::AddWall(const X::Math::LineSegment& wall)
+{
+	mWalls.push_back(wall);
+}
+
+bool AI::AIWorld::HasLineOfSight(const X::Math::LineSegment& lineSegment) const
+{
+	for (const X::Math::LineSegment& wall : mWalls)
+	{
+		if (X::Math::Intersect(lineSegment, wall))
+		{
+			return false;
+
+		}
+	}
+	for (const X::Math::Circle& obstacle : mObstacles)
+	{
+		if (X::Math::Intersect(lineSegment, obstacle))
+		{
+			return false;
+
+		}
+	}
+	return true;
+}
+
+
 EntityPtrs AIWorld::GetEntitiesInRAnge(const X::Math::Circle& range, uint32_t typeId)
 {
 	const float radiusSq = range.radius * range.radius;

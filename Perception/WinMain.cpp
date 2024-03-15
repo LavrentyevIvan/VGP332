@@ -86,7 +86,18 @@ void GameInit()
 	{
 		auto& mineral = minerals.emplace_back(std::make_unique<Mineral>(aiWorld));
 		mineral->Initialize();
+		
+		X::Math::Vector2 topLeft(500.0f, 100.0f);
+		X::Math::Vector2 topRight(600.0f, 100.0f);
+		X::Math::Vector2 bottomLeft(500.0f, 600.0f);
+		X::Math::Vector2 bottomRight(600.0f, 600.0f);
+		aiWorld.AddWall({ topLeft, topRight });
+		aiWorld.AddWall({ topRight, bottomLeft });
+		aiWorld.AddWall({ bottomLeft, bottomRight });
+		aiWorld.AddWall({ bottomLeft, topLeft });
 	}
+
+	aiWorld.AddObstacle({ 230.0f, 300.0f, 50.0f });
 }
 
 bool GameLoop(float deltaTime)
@@ -290,6 +301,8 @@ bool GameLoop(float deltaTime)
 	{
 		mineral->Render();
 	}
+
+	const AIWorld::O
 
 	const bool quit = X::IsKeyPressed(X::Keys::ESCAPE);
 
