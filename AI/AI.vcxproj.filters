@@ -28,6 +28,9 @@
     <Filter Include="Src\Perception">
       <UniqueIdentifier>{5845fe60-c965-4de8-8748-5172415b3fc8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\GoalBasedDecision">
+      <UniqueIdentifier>{98c54439-bc2c-4cde-bc5f-fdd9cccb7076}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inc\AI.h">
@@ -95,6 +98,18 @@
     </ClInclude>
     <ClInclude Include="Inc\MemoryRecord.h">
       <Filter>Inc\Perception</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>Inc\GoalBasedDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GoalComposite.h">
+      <Filter>Inc\GoalBasedDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Strategy.h">
+      <Filter>Inc\GoalBasedDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DeicisionModule.h">
+      <Filter>Inc\GoalBasedDecision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

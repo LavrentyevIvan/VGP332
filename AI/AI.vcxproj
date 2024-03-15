@@ -141,15 +141,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Goal.h" />
     <ClInclude Include="Inc\Agent.h" />
     <ClInclude Include="Inc\AI.h" />
     <ClInclude Include="Inc\AIWorld.h" />
     <ClInclude Include="Inc\AStar.h" />
     <ClInclude Include="Inc\BFS.h" />
     <ClInclude Include="Inc\Common.h" />
+    <ClInclude Include="Inc\DeicisionModule.h" />
     <ClInclude Include="Inc\DFS.h" />
     <ClInclude Include="Inc\Dijkstra.h" />
     <ClInclude Include="Inc\Entity.h" />
+    <ClInclude Include="Inc\GoalComposite.h" />
     <ClInclude Include="Inc\GridBasedGraph.h" />
     <ClInclude Include="Inc\GroupBehaviour.h" />
     <ClInclude Include="Inc\MemoryRecord.h" />
@@ -161,6 +164,7 @@
     <ClInclude Include="Inc\StateMachine.h" />
     <ClInclude Include="Inc\SteeringBehaviour.h" />
     <ClInclude Include="Inc\SteeringModule.h" />
+    <ClInclude Include="Inc\Strategy.h" />
     <ClInclude Include="Inc\WanderBehaviour.h" />
     <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
