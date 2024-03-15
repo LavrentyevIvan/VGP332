@@ -302,7 +302,17 @@ bool GameLoop(float deltaTime)
 		mineral->Render();
 	}
 
-	const AIWorld::O
+	const AIWorld::Obstacles& obstacles = aiWorld.GetObstacles();
+	for (const X::Math::Circle& obstacle : obstacles)
+	{
+		X::DrawScreenCircle(obstacle.center, obstacle.radius, X::Colors::Gray);
+	}
+
+	const AIWorld::Walls& walls = aiWorld.GetWalls();
+	for (const X::Math::LineSegment& wall : walls)
+	{
+		X::DrawScreenLine(wall.from, wall.to, X::Colors::Gray);
+	}
 
 	const bool quit = X::IsKeyPressed(X::Keys::ESCAPE);
 
