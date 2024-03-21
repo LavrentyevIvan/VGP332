@@ -17,12 +17,11 @@ namespace AI
 		template<class GoalType>
 		GoalType* AddSubGoal()
 		{
-			static_assert(std::is_base_of_v<Goal<AgentType>, GoalType>, "GoalComposite:  subgoal must be of type Goal");
+			static_assert(std::is_base_of_v<Goal<AgentType>, GoalType>, "GoalComposite: subgoal must be of type Goal");
 			auto& newGoal = mSubGoals.emplace_back(std::make_unique<GoalType>());
 			return static_cast<GoalType*>(newGoal.get());
 		}
-
-		void RemoveAllSubGoals(AgentType& agent) 
+		void RemoveAllSubGoals(AgentType& agent)
 		{
 			for (auto& goal : mSubGoals)
 			{
@@ -32,15 +31,17 @@ namespace AI
 			mSubGoals.clear();
 		}
 
-		Status ProcessSubGoal(AgentType& agent)
+		Status ProcessSubGoals(AgentType& agent)
 		{
 			while (!mSubGoals.empty())
 			{
 				auto& goal = mSubGoals.back();
-				if (goal->GetStatus() != Status::Completed && goal->GetStatus() != Status::Failed)
+				if (goal->GetStatus() != Status::Completed &&
+					goal->GetStatus() != Status::Failed)
 				{
 					break;
 				}
+
 				goal->Terminate(agent);
 				goal.reset();
 				mSubGoals.pop_back();
@@ -53,10 +54,13 @@ namespace AI
 				{
 					return Status::Active;
 				}
+
 				return status;
 			}
+
 			return Status::Completed;
-		}	
+		}
+
 		std::vector<std::unique_ptr<Goal<AgentType>>> mSubGoals;
 	};
 }

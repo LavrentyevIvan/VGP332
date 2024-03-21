@@ -99,9 +99,6 @@
     <ClInclude Include="Inc\MemoryRecord.h">
       <Filter>Inc\Perception</Filter>
     </ClInclude>
-    <ClInclude Include="Goal.h">
-      <Filter>Inc\GoalBasedDecision</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\GoalComposite.h">
       <Filter>Inc\GoalBasedDecision</Filter>
     </ClInclude>
@@ -109,6 +106,9 @@
       <Filter>Inc\GoalBasedDecision</Filter>
     </ClInclude>
     <ClInclude Include="Inc\DeicisionModule.h">
+      <Filter>Inc\GoalBasedDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Goal.h">
       <Filter>Inc\GoalBasedDecision</Filter>
     </ClInclude>
   </ItemGroup>

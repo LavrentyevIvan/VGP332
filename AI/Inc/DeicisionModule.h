@@ -29,11 +29,20 @@ namespace AI
 
 		void Update()
 		{
-			// decide what is the best goal at this time
+			
+			//decide what is the best goal at this time
 			Arbitrate();
+			//process the goal
 			if (mCurrentGoal != nullptr)
 			{
 				mCurrentGoal->Process(mAgent);
+				if (mCurrentGoal->GetStatus() == GoalType::Status::Completed ||
+					mCurrentGoal->GetStatus() == GoalType::Status::Failed)
+				{
+					mCurrentGoal->Terminate(mAgent);
+					mCurrentGoal.reset();
+					mCurrentStrategy = nullptr;
+				}
 			}
 		}
 	private:

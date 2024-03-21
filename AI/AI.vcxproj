@@ -141,7 +141,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Goal.h" />
     <ClInclude Include="Inc\Agent.h" />
     <ClInclude Include="Inc\AI.h" />
     <ClInclude Include="Inc\AIWorld.h" />
@@ -152,6 +151,7 @@
     <ClInclude Include="Inc\DFS.h" />
     <ClInclude Include="Inc\Dijkstra.h" />
     <ClInclude Include="Inc\Entity.h" />
+    <ClInclude Include="Inc\Goal.h" />
     <ClInclude Include="Inc\GoalComposite.h" />
     <ClInclude Include="Inc\GridBasedGraph.h" />
     <ClInclude Include="Inc\GroupBehaviour.h" />

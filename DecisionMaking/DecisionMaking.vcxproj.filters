@@ -13,5 +13,102 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="AtomicGoals">
+      <UniqueIdentifier>{119e1861-6939-4dfa-9c38-9e94158f9ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CompositeGoals">
+      <UniqueIdentifier>{afc4d2a3-7dd4-491b-a0e7-b61ce242e51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Strategy">
+      <UniqueIdentifier>{7bb07e31-1dcf-451c-ba72-5fb4225a5599}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SCV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeIds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mineral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Raven.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalWander.h">
+      <Filter>AtomicGoals</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalSeekToPosition.h">
+      <Filter>AtomicGoals</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalMoveToPosition.h">
+      <Filter>CompositeGoals</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenStrategy.h">
+      <Filter>Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenHuntStrategy.h">
+      <Filter>Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalArriveAtPosition.h">
+      <Filter>AtomicGoals</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenGoToMineralStrategy.h">
+      <Filter>Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalHarvestMineral.h">
+      <Filter>AtomicGoals</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenHarvestStrategy.h">
+      <Filter>Strategy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Mineral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Raven.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalWander.cpp">
+      <Filter>AtomicGoals</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalSeekToPosition.cpp">
+      <Filter>AtomicGoals</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalMoveToPosition.cpp">
+      <Filter>CompositeGoals</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenStrategy.cpp">
+      <Filter>Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenHuntStrategy.cpp">
+      <Filter>Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalArriveAtPosition.cpp">
+      <Filter>AtomicGoals</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenGoToMineralStrategy.cpp">
+      <Filter>Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalHarvestMineral.cpp">
+      <Filter>AtomicGoals</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenHarvestStrategy.cpp">
+      <Filter>Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

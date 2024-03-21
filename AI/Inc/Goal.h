@@ -31,7 +31,7 @@ namespace AI
 				Activate(agentType);
 			}
 		}
-		void ReactiveIfFailed(AgentType& agent)
+		void ReactivateIfFailed(AgentType& agent)
 		{
 			if (mStatus == Status::Failed)
 			{

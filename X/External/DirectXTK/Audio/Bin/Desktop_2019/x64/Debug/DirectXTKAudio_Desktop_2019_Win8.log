@@ -845,10 +845,10 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\winrt\windows.device
   SoundEffect.cpp
   SoundEffectInstance.cpp
   SoundStreamInstance.cpp
+  WAVFileReader.cpp
   WaveBank.cpp
   WaveBankReader.cpp
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Audio\WaveBankReader.cpp(39,22): warning C5264: '`anonymous-namespace'::MAX_DATA_SEGMENT_SIZE': 'const' variable is not used
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Audio\WaveBankReader.cpp(34,22): warning C5264: '`anonymous-namespace'::DVD_BLOCK_SIZE': 'const' variable is not used
-  WAVFileReader.cpp
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\X\External\DirectXTK\Audio\WaveBankReader.cpp(39,22): warning C5264: '`anonymous-namespace'::MAX_DATA_SEGMENT_SIZE': 'const' variable is not used
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\X\External\DirectXTK\Audio\WaveBankReader.cpp(34,22): warning C5264: '`anonymous-namespace'::DVD_BLOCK_SIZE': 'const' variable is not used
   Generating Code...
-  DirectXTKAudio_Desktop_2019_Win8.vcxproj -> C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+  DirectXTKAudio_Desktop_2019_Win8.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
