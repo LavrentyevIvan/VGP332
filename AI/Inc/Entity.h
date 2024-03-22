@@ -20,7 +20,7 @@ namespace AI {
 
 		X::Math::Matrix3 GetWorldTransform() const;
 		uint32_t GetTypeId() const { return static_cast<uint32_t>(mUniqueId >> 32); }
-		uint32_t GetUniqueId() const {return mUniqueId;}
+		uint64_t GetUniqueId() const {return mUniqueId;}
 	private :
 		const uint64_t mUniqueId = 0;
 	};

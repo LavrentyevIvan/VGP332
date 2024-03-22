@@ -5,7 +5,7 @@
 #include "RavenStrategy.h"
 #include "RavenHuntStrategy.h"
 #include "RavenGoToMineralStrategy.h"
-#include "RavenHarvestMineralStrategy.h"
+#include "RavenHarvestStrategy.h"
 
 extern float wanderJitter;
 extern float wanderRadius;
@@ -66,15 +66,15 @@ void Raven::Load()
 
 
 	mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
-	mSeekBehavior = mSteeringModule->AddBehavior<AI::SeekBehavior>();
-	mArriveBehavior = mSteeringModule->AddBehavior<AI::ArriveBehavior>();
-	mWanderBehavior = mSteeringModule->AddBehavior<AI::WanderBehavior>();
+	mSeekBehaviour = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
+	mArriveBehaviour = mSteeringModule->AddBehaviour<AI::ArriveBehaviour>();
+	mWanderBehaviour = mSteeringModule->AddBehaviour<AI::WanderBehaviour>();
 
 	mDecisionModule = std::make_unique<AI::DecisionModule<Raven>>(*this);
 	mDecisionModule->AddStrategy<RavenHuntStrategy>();
 	auto strategy = mDecisionModule->AddStrategy<RavenGoToMineralStrategy>();
 	strategy->SetPerception(mPerceptionModule.get());
-	mDecisionModule->AddStrategy<RavenHarvestMineralStrategy>();
+	mDecisionModule->AddStrategy<RavenHarvestStrategy>();
 
 	for (int i = 0; i < mTextureIds.size(); ++i)
 	{
@@ -96,7 +96,7 @@ void Raven::Update(float deltaTime)
 	mPerceptionModule->Update(deltaTime);
 	mDecisionModule->Update();
 
-	mWanderBehavior->Setup(wanderRadius, wanderDistance, wanderJitter);
+	mWanderBehaviour->Setup(wanderRadius, wanderDistance, wanderJitter);
 
 	const X::Math::Vector2 force = mSteeringModule->Calculate();
 	const X::Math::Vector2 acceleration = force / mass;
@@ -148,29 +148,29 @@ void Raven::Render()
 
 void Raven::ShowDebug(bool debug)
 {
-	mSeekBehavior->ShowDebug(debug);
-	mWanderBehavior->ShowDebug(debug);
+	mSeekBehaviour->ShowDebug(debug);
+	mWanderBehaviour->ShowDebug(debug);
 }
 
 void Raven::SetSeek(bool active)
 {
-	mSeekBehavior->SetActive(active);
+	mSeekBehaviour->SetActive(active);
 }
 
 void Raven::SetArrive(bool active)
 {
-	mArriveBehavior->SetActive(active);
+	mArriveBehaviour->SetActive(active);
 }
 
 void Raven::SetWander(bool active)
 {
-	mWanderBehavior->SetActive(active);
+	mWanderBehaviour->SetActive(active);
 }
 
 void Raven::SetTargetDestination(const X::Math::Vector2& targetDestination)
 {
-	/*RavenStrategy* strategy = mDecisionModule->AddStrategy<RavenStrategy>();
-	strategy->SetTargetDestination(targetDestination);*/
+	RavenStrategy* strategy = mDecisionModule->AddStrategy<RavenStrategy>();
+	strategy->SetTargetDestination(targetDestination);
 }
 
 void Raven::SetTarget(Entity* target)

@@ -1,0 +1,8 @@
+Tiles: 7
+grass.png 0
+water.png 0
+stone.png 1
+tree0.png 1
+tree1.png 1
+tree2.png 1
+tree3.png 1

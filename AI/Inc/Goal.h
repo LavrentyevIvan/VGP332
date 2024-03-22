@@ -35,7 +35,7 @@ namespace AI
 		{
 			if (mStatus == Status::Failed)
 			{
-				Active(agent);
+				Activate(agent);
 			}
 		}
 

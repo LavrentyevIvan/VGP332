@@ -106,11 +106,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -155,6 +155,7 @@
     <ClInclude Include="VisualSensor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Final\VisualSensor.cpp" />
     <ClCompile Include="GoalArriveAtPosition.cpp" />
     <ClCompile Include="GoalHarvestMineral.cpp" />
     <ClCompile Include="GoalMoveToPosition.cpp" />
