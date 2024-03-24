@@ -1,8 +1,15 @@
 #pragma once
 
 #include <AI.h>
-
+#include "TileMap.h"
 class VisualSensor;
+
+enum class ravenStates {
+	GoHome,
+	SearchForMushroom,
+	MoveToMushroom,
+	HarvestMushroom
+};
 
 class Raven : public AI::Agent
 {
@@ -21,11 +28,29 @@ public:
 	void SetArrive(bool active);
 	void SetWander(bool active);
 	void SetTargetDestination(const X::Math::Vector2& targetDestination);
+	X::Math::Vector2 GetTargetDestination();
 	void SetTarget(Entity* target);
 	Entity* GetTarget() { return mTarget; }
+	
+	void CollectMushroom();
+	int GetMushroomsCollected() { return collectedMushrooms; }
 
 	const AI::PerceptionModule* GetPerception() const { return mPerceptionModule.get(); }
 
+	TileMap* ravenTilemap;
+	int* ptrHomeStorage;
+
+	void setState(ravenStates newState);
+	ravenStates getState() { return currentState; }
+
+	void DepositMushrooms(int ravenMushrooms);
+
+	void setHarvested(bool onHarvest);
+	
+	bool getHarvested() { return hasHarvested; }
+
+	void setTimer(float count);
+	float getTimer() { return timer; }
 private:
 	std::unique_ptr<AI::PerceptionModule> mPerceptionModule;
 	std::unique_ptr<AI::SteeringModule> mSteeringModule;
@@ -34,9 +59,14 @@ private:
 	VisualSensor* mVisualSensor = nullptr;
 	AI::SeekBehaviour* mSeekBehaviour = nullptr;
 	AI::ArriveBehaviour* mArriveBehaviour = nullptr;
-	AI::WanderBehaviour* mWanderBehaviour = nullptr;
 
 	std::array<X::TextureId, 32> mTextureIds;
+	X::Math::Vector2 mDestination;
+	AI::StateMachine<Raven> rStateMachine;
 
 	Entity* mTarget;
+	int collectedMushrooms;
+	ravenStates currentState;
+	float timer;
+	bool hasHarvested;
 };

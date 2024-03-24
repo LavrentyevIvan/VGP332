@@ -1,3 +1,4 @@
+#include <ImGui/Inc/imgui.h>
 #include "Raven.h"
 
 #include "TypeIds.h"
@@ -5,11 +6,10 @@
 #include "RavenStrategy.h"
 #include "RavenHuntStrategy.h"
 #include "RavenGoToMineralStrategy.h"
+#include "RavenGoHomeStrategy.h"
 #include "RavenHarvestStrategy.h"
+#include "RavenStates.h"
 
-extern float wanderJitter;
-extern float wanderRadius;
-extern float wanderDistance;
 extern float viewRange;
 extern float viewAngle;
 
@@ -59,18 +59,25 @@ Raven::Raven(AI::AIWorld& world)
 
 void Raven::Load()
 {
+	timer = 10.0f;
 	mPerceptionModule = std::make_unique<AI::PerceptionModule>(*this, ComputeImportance);
 	mPerceptionModule->SetMemorySpan(3.0f);
 	mVisualSensor = mPerceptionModule->AddSensor<VisualSensor>();
 	mVisualSensor->targetType = AgentType::Mineral;
-
+	rStateMachine.Initialize(this);
+	rStateMachine.AddState<GoHome>();
+	rStateMachine.AddState<SearchForMushroom>();
+	rStateMachine.AddState<MoveToMushroom>();
+	rStateMachine.AddState<HarvestMushroom>();
+	setState(ravenStates::SearchForMushroom);
 
 	mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
+	
 	mSeekBehaviour = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
 	mArriveBehaviour = mSteeringModule->AddBehaviour<AI::ArriveBehaviour>();
-	mWanderBehaviour = mSteeringModule->AddBehaviour<AI::WanderBehaviour>();
 
 	mDecisionModule = std::make_unique<AI::DecisionModule<Raven>>(*this);
+	mDecisionModule->AddStrategy<RavenGoHomeStrategy>();
 	mDecisionModule->AddStrategy<RavenHuntStrategy>();
 	auto strategy = mDecisionModule->AddStrategy<RavenGoToMineralStrategy>();
 	strategy->SetPerception(mPerceptionModule.get());
@@ -90,14 +97,16 @@ void Raven::Unload()
 
 void Raven::Update(float deltaTime)
 {
+	timer -= 1*deltaTime;
+
 	mVisualSensor->viewRange = viewRange;
 	mVisualSensor->viewHalfAngle = viewAngle * X::Math::kDegToRad;
 
 	mPerceptionModule->Update(deltaTime);
 	mDecisionModule->Update();
+	rStateMachine.Update(deltaTime);
 
-	mWanderBehaviour->Setup(wanderRadius, wanderDistance, wanderJitter);
-
+	//movement
 	const X::Math::Vector2 force = mSteeringModule->Calculate();
 	const X::Math::Vector2 acceleration = force / mass;
 	velocity += acceleration * deltaTime;
@@ -110,23 +119,6 @@ void Raven::Update(float deltaTime)
 
 	const float screenWidth = X::GetScreenWidth();
 	const float screenHeight = X::GetScreenHeight();
-	if (position.x < 0.0f)
-	{
-		position.x += screenWidth;
-	}
-	if (position.x >= screenWidth)
-	{
-		position.x -= screenWidth;
-	}
-	if (position.y < 0.0f)
-	{
-		position.y += screenHeight;
-	}
-	if (position.y >= screenHeight)
-	{
-		position.y -= screenHeight;
-	}
-
 	const auto& memoryRecords = mPerceptionModule->GetMemoryRecords();
 	for (auto& memory : memoryRecords)
 	{
@@ -149,7 +141,7 @@ void Raven::Render()
 void Raven::ShowDebug(bool debug)
 {
 	mSeekBehaviour->ShowDebug(debug);
-	mWanderBehaviour->ShowDebug(debug);
+
 }
 
 void Raven::SetSeek(bool active)
@@ -162,18 +154,44 @@ void Raven::SetArrive(bool active)
 	mArriveBehaviour->SetActive(active);
 }
 
-void Raven::SetWander(bool active)
-{
-	mWanderBehaviour->SetActive(active);
-}
 
 void Raven::SetTargetDestination(const X::Math::Vector2& targetDestination)
 {
-	RavenStrategy* strategy = mDecisionModule->AddStrategy<RavenStrategy>();
-	strategy->SetTargetDestination(targetDestination);
+	mDestination = targetDestination;
+}
+
+X::Math::Vector2 Raven::GetTargetDestination()
+{
+	return mDestination;
 }
 
 void Raven::SetTarget(Entity* target)
 {
 	mTarget = target;
 }
+
+void Raven::CollectMushroom()
+{
+	collectedMushrooms += 1;
+}
+
+void Raven::setState(ravenStates newState)
+{
+	rStateMachine.ChangeState((int)newState);
+}
+
+void Raven::DepositMushrooms(int ravenMushrooms)
+{
+	ptrHomeStorage += ravenMushrooms;
+}
+
+void Raven::setHarvested(bool onHarvest)
+{
+	hasHarvested = onHarvest;
+}
+
+void Raven::setTimer(float count)
+{
+	timer = count;
+}
+

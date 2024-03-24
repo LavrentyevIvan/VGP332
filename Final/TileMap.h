@@ -27,6 +27,8 @@ public:
 	int getRows() const { return mRows; }
 
 	X::Math::Vector2 GetPixelPosition(int x, int y)const;
+	X::Math::Vector2 GetTilePosition(const X::Math::Vector2& pos) const;
+
 
 	Path FindPathBFS(int startX, int startY, int endX, int endY);
 	Path FindPathDFS(int startX, int startY, int endX, int endY);
@@ -41,5 +43,5 @@ private:
 	int mColumns = 0;
 	int mRows = 0;
 	int mTileWidth = 0;
-	int mTileheight = 0;
+	int mTileHeight = 0;
 };

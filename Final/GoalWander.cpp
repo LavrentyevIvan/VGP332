@@ -1,5 +1,5 @@
 #include "GoalWander.h"
-
+/*
 GoalWander::GoalWander()
 {
 }
@@ -19,4 +19,4 @@ GoalWander::Status GoalWander::Process(Raven& agent)
 void GoalWander::Terminate(Raven& agent)
 {
 	agent.SetWander(false);
-}
+}*/

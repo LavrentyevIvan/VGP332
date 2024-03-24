@@ -5,9 +5,7 @@
 
 extern float viewRange;
 extern float viewAngle;
-extern float wanderJitter;
-extern float wanderRadius;
-extern float wanderDistance;
+
 
 namespace
 {
@@ -97,9 +95,7 @@ void SCV::Update(float deltatime)
 
 	mPerceptionModule->Update(deltatime);
 
-	if (mWanderBehaviour != nullptr) {
-		mWanderBehaviour->Setup(wanderRadius, wanderDistance, wanderJitter);
-	}
+	
 	const X::Math::Vector2 force = mSteeringModule->Calculate();
 	const X::Math::Vector2 acceleration = force / mass;
 	velocity += acceleration * deltatime;

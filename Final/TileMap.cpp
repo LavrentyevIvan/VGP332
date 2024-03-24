@@ -49,7 +49,7 @@ void TileMap::LoadTiles(const char* fileName)
 	file.close();
 
 	mTileWidth = X::GetSpriteWidth(mTiles[0].textureId);
-	mTileheight= X::GetSpriteHeight(mTiles[0].textureId);
+	mTileHeight= X::GetSpriteHeight(mTiles[0].textureId);
 
 
 }
@@ -141,7 +141,7 @@ void TileMap::Render() const
 			position.x += mTileWidth; // Move to the next tile position horizontally.
 		}
 		position.x = 0.0f; // Reset horizontal position after a row is complete.
-		position.y += mTileheight; // Move to the next row position vertically.
+		position.y += mTileHeight; // Move to the next row position vertically.
 	}
 
 	// Draw debug drawnode
@@ -181,6 +181,13 @@ void TileMap::Render() const
 	}
 }
 
+X::Math::Vector2 TileMap::GetTilePosition(const X::Math::Vector2& pos) const
+{
+	float x = floor(pos.x / static_cast<float>(mTileWidth));
+	float y = floor(pos.y / static_cast<float>(mTileHeight));
+
+	return { x, y };
+}
 
 bool TileMap::IsBlocked(int x, int y) const
 {
@@ -203,7 +210,7 @@ X::Math::Vector2 TileMap::GetPixelPosition(int x, int y)const
 {
 	return {
 		(x + 0.5f) * mTileWidth,
-		(y + 0.5f)* mTileheight
+		(y + 0.5f)* mTileHeight
 	};
 
 }

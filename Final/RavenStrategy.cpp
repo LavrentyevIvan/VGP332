@@ -8,7 +8,7 @@ void RavenStrategy::SetTargetDestination(const X::Math::Vector2& destination)
 
 float RavenStrategy::CalculateDesirability(Raven& agent) const
 {
-	return 100.0f;
+	return 1.0f;
 }
 
 std::unique_ptr<AI::Goal<Raven>> RavenStrategy::CreateGoal() const

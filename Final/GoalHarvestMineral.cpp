@@ -25,6 +25,8 @@ GoalHarvestMineral::Status GoalHarvestMineral::Process(Raven& agent)
 		if (mineral->GetHealth() < 0)
 		{
 			agent.SetTarget(nullptr);
+			agent.CollectMushroom();
+			agent.setHarvested(true);
 			mStatus = GoalHarvestMineral::Status::Completed;
 		}
 	}

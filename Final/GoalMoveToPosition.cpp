@@ -1,38 +1,36 @@
 #include "GoalMoveToPosition.h"
 #include "GoalSeekToPosition.h"
 #include "GoalArriveAtPosition.h"
-
 GoalMoveToPosition::GoalMoveToPosition()
 {
 }
 
 void GoalMoveToPosition::Activate(Raven& agent)
 {
+	float seekDistance = 20.0f;
+
 	mStatus = GoalMoveToPosition::Status::Active;
 	RemoveAllSubGoals(agent);
-	
-	// Path path = tileMap->GetPath(agent.position on the tile map(x, y)
-	// for(int i = 0; i < path.size(); ++i
-	//	if (i < path.size() - 1)
-	//	seek = AddSubGoal<GoalSeek>()
-	// seek->setdestination(tilemap->gettilepixelposition(path[i].xy)
-	// else
-	//	arrive = AddSubGoal<GoalArrive>()
-	// arrive->setdestination(tilemap->gettilepixelposition(path[i].xy)
-	//	
-	float distanceSqr = X::Math::DistanceSqr(agent.position, mDestination);
-	float seekDistance = 200.0f;
-	if (distanceSqr > 10.0f)
+
+	startPos = agent.ravenTilemap->GetTilePosition(agent.position);
+	//mDestination = agent.ravenTilemap->GetTilePosition(X::Math::Vector2{200,200});
+
+	Path path = agent.ravenTilemap->FindPathAStar(startPos.x, startPos.y, mDestination.x, mDestination.y);
+
+	for (int i = 0; i < path.size(); ++i)
 	{
-		GoalArriveAtPosition* arrive = AddSubGoal<GoalArriveAtPosition>();
-		arrive->SetDestination(mDestination);
-	}
-	if (distanceSqr > seekDistance * seekDistance)
-	{
+		if (i < path.size() - 1) {
 		GoalSeekToPosition* seek = AddSubGoal<GoalSeekToPosition>();
-		seek->SetDestination(mDestination);
-		seek->SetDestinationRange(seekDistance);
+		seek->SetDestination(path[i]);
+		}
+		else
+		{
+			GoalArriveAtPosition* arrive = AddSubGoal<GoalArriveAtPosition>();
+			arrive->SetDestination(path[i]);
+		}
 	}
+	
+
 }
 
 GoalMoveToPosition::Status GoalMoveToPosition::Process(Raven& agent)

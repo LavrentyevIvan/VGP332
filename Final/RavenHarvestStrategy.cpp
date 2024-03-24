@@ -5,20 +5,26 @@
 
 float RavenHarvestStrategy::CalculateDesirability(Raven& agent) const
 {
-	if (agent.GetTarget() != nullptr)
+	if (agent.getState() == ravenStates::HarvestMushroom)
 	{
-		auto entities = agent.world.GetEntitiesInRAnge({ agent.destination, 1.0f }, static_cast<uint32_t>(AgentType::Mineral));
-		if (!entities.empty())
+		if (agent.GetTarget() != nullptr)
 		{
-			Mineral* mineral = static_cast<Mineral*>(entities[0]);
-			float distanceSqr = X::Math::DistanceSqr(agent.position, agent.destination);
-			if (distanceSqr < 25.0f && mineral->GetHealth() > 0)
+			auto entities = agent.world.GetEntitiesInRAnge({ agent.destination, 1.0f }, static_cast<uint32_t>(AgentType::Mineral));
+			if (!entities.empty())
 			{
-				return 1000.0f;
+				Mineral* mineral = static_cast<Mineral*>(entities[0]);
+				float distanceSqr = X::Math::DistanceSqr(agent.position, agent.destination);
+				if (distanceSqr < 25.0f && mineral->GetHealth() > 0)
+				{
+					return 1000.0f;
+				}
 			}
 		}
 	}
-	return 0.0f;
+	else
+	{
+		return 0.0f;
+	}
 }
 
 std::unique_ptr<AI::Goal<Raven>> RavenHarvestStrategy::CreateGoal() const

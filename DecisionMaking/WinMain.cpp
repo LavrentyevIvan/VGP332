@@ -83,12 +83,14 @@ void KillAgent()
 void SpawnRaven()
 {
 	auto& agent = ravenAgents.emplace_back(std::make_unique<Raven>(aiWorld));
+
 	agent->Load();
 
 	const float screenWidth = X::GetScreenWidth();
 	const float screenHeight = X::GetScreenHeight();
-	agent->position = X::RandomVector2({ 100.0f, 100.0f },
-		{ screenWidth - 100.0f, screenHeight - 100.0f });
+	agent->position = X::Math::Vector2({ 10,10 });
+	/*/agent->position = X::RandomVector2({ 100.0f, 100.0f },
+		{ screenWidth - 100.0f, screenHeight - 100.0f });*/
 	agent->destination = destination;
 	agent->radius = radius;
 	agent->ShowDebug(showDebug);

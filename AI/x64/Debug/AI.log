@@ -1,9 +1,17 @@
-﻿  AIWorld.cpp
+﻿  Precompiled.cpp
+  AIWorld.cpp
+  AStar.cpp
+  BFS.cpp
+  DFS.cpp
+  Dijkstra.cpp
   Entity.cpp
-C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\AI\Src\Entity.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\AI\Src\Entity.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GridBasedGraph.cpp
   GroupBehaviour.cpp
+  PerceptionModule.cpp
   PursuitBehaviour.cpp
   SeekBehaviour.cpp
+  SteeringModule.cpp
   WanderBehaviour.cpp
   Generating Code...
-  AI.vcxproj -> C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\x64\Debug\AI.lib
+  AI.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\x64\Debug\AI.lib

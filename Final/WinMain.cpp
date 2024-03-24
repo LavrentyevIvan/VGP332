@@ -18,23 +18,19 @@ using namespace AI;
 
 
 //Part 1 Tilemap
-TileMap tileMap;
 X::TextureId textureId;
 X::Math::Vector2 position;
 Path path;
-
+TileMap tileMap;
 
 
 
 
 //Part 2 Agent
-int startX = 5;
-int startY = 9;
-int endX = 15;
-int endY = 12;
+
 int randX;
 int randY;
-float viewRange = 300.0f;
+float viewRange = 500.0f;
 float viewAngle = 45.0f;
 float radius = 50.0f;
 bool isValidTile = false;
@@ -46,13 +42,8 @@ std::vector<std::unique_ptr<Raven>> ravenAgents;
 std::vector<std::unique_ptr<Mineral>> minerals;
 
 
-//wander stuff
-bool useWander = false;
-
-float wanderJitter = 5.0f;
-float wanderRadius = 20.0f;
-float wanderDistance = 50.0f;
-float weightWander = 0.1f;
+//Part 3 state stuff and decision modules
+int homeStorage;
 
 
 
@@ -65,16 +56,17 @@ void SpawnRaven()
 {
 	auto& agent = ravenAgents.emplace_back(std::make_unique<Raven>(aiWorld));
 
-	agent->Load();
+	agent->ravenTilemap = &tileMap;
+	agent->ptrHomeStorage = &homeStorage;
 
+
+	agent->Load();
 	const float screenWidth = X::GetScreenWidth();
 	const float screenHeight = X::GetScreenHeight();
-
-	agent->position = tileMap.GetPixelPosition(100, 50);
+	agent->position = X::Math::Vector2{ 120, 120 };
 	agent->destination = destination;
 	agent->radius = radius;
 	agent->ShowDebug(showDebug);
-	agent->SetWander(useWander);
 	
 
 }
@@ -125,14 +117,7 @@ bool GameLoop(float deltaTime)
 {
 	ImGui::Begin("Final", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 	{
-		const int columns = tileMap.getColumns();
-		const int rows = tileMap.getRows();
 
-		ImGui::DragInt("Start X", &startX, 1, 0, columns - 1);
-		ImGui::DragInt("Start Y", &startY, 1, 0, rows - 1);
-
-		ImGui::DragInt("End X", &endX, 1, 0, columns - 1);
-		ImGui::DragInt("End Y", &endY, 1, 0, rows - 1);
 	}
 
 	tileMap.Render();
@@ -153,54 +138,7 @@ bool GameLoop(float deltaTime)
 			agent->ShowDebug(showDebug);
 		}
 	}
-
-
-
-	if (ImGui::Checkbox("Wander", &useWander))
-	{
-		for (auto& agent : ravenAgents)
-		{
-			agent->SetWander(useWander);
-		}
-	}
-
-	ImGui::SameLine();
-	if (useWander) {
-		if (ImGui::CollapsingHeader("WanderSettings", ImGuiTreeNodeFlags_DefaultOpen))
-		{
-			ImGui::DragFloat("Jitter", &wanderJitter, 0.1f, 0.1f, 10.0f);
-			ImGui::DragFloat("Radius", &wanderRadius, 0.1f, 0.1f, 100.0f);
-			ImGui::DragFloat("Distance", &wanderDistance, 0.1f, 0.1f, 500.0f);
-
-
-		}
-	}
-	
-	if (ImGui::CollapsingHeader("visualSensor", ImGuiTreeNodeFlags_DefaultOpen))
-	{
-		ImGui::DragFloat("ViewRange", &viewRange, 1.0f, 100.0f, 1000.0f);
-		ImGui::DragFloat("ViewAngle", &viewAngle, 1.0f, 1.0f, 360.0f);
-
-	}
-	
 	ImGui::End();
-
-
-	if (X::IsMousePressed(X::Mouse::LBUTTON)) {
-		const float mouseX = static_cast<float>(X::GetMouseScreenX());
-		const float mouseY = static_cast<float>(X::GetMouseScreenY());
-		destination = { mouseX, mouseY };
-		for (auto& agent : ravenAgents)
-		{
-			agent->destination = destination;
-
-		}
-		for (auto& agent : ravenAgents)
-		{
-			agent->SetTargetDestination(destination);
-
-		}
-	}
 	aiWorld.Update();
 	for (auto& agent : ravenAgents)
 	{

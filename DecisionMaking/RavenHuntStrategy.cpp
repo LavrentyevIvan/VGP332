@@ -1,6 +1,7 @@
 #include "RavenHuntStrategy.h"
 
 #include "GoalWander.h"
+#include "GoalMoveToPosition.h"
 
 
 float RavenHuntStrategy::CalculateDesirability(Raven& agent) const
@@ -10,6 +11,6 @@ float RavenHuntStrategy::CalculateDesirability(Raven& agent) const
 
 std::unique_ptr<AI::Goal<Raven>> RavenHuntStrategy::CreateGoal() const
 {
-	auto newGoal = std::make_unique<GoalWander>();
+	auto newGoal = std::make_unique<GoalMoveToPosition>();
 	return newGoal;
 }
