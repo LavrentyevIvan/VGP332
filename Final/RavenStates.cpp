@@ -1,21 +1,27 @@
 #include "RavenStates.h"
 void GoHome::Enter(Raven& agent)
 {
-	agent.setTimer(10.0f);
+
 }
 
 void GoHome::Update(Raven& agent, float deltaTime)
 {
 	//deposit mushroom
-	if (agent.GetTargetDestination().x == 120 && agent.GetTargetDestination().y == 120)
+	float distToTarget = X::Math::Magnitude(agent.position - agent.GetTargetDestination());
+	if (distToTarget <= 10.0f)
 	{
-		agent.DepositMushrooms(agent.GetMushroomsCollected());
-	}
-	if (agent.GetMushroomsCollected() == 0)
-	{
-		agent.setState(ravenStates::SearchForMushroom);
 
+		agent.DepositMushrooms(agent.GetMushroomsCollected());
+		agent.resetMushrooms();
+
+		if (agent.GetMushroomsCollected() <= 0)
+		{
+			agent.setTimer(60.0f);
+			agent.changeState(ravenStates::SearchForMushroom);
+
+		}
 	}
+
 	
 }
 
@@ -39,21 +45,28 @@ void SearchForMushroom::Update(Raven& agent, float deltaTime)
 	const auto& memoryRecords = mPerception->GetMemoryRecords();
 	if (agent.getTimer() <= 0)
 	{
-		agent.setState(ravenStates::GoHome);
+		agent.changeState(ravenStates::GoHome);
 
 	}
-	else
-	{
+	
 		for (auto& record : memoryRecords)
 		{
+
 			AgentType agentType = static_cast<AgentType>(record.GetProperty<int>("type", 0));
 			if (agentType == AgentType::Mineral)
 			{
-				agent.setState(ravenStates::MoveToMushroom);
+				agent.changeState(ravenStates::MoveToMushroom);
+
+			}
+			if (agent.getTimer() <= 0.0f)
+			{
+				agent.changeState(ravenStates::GoHome);
 
 			}
 		}
-	}
+	
+		
+	
    
 
 }
@@ -78,9 +91,10 @@ void MoveToMushroom::Enter(Raven& agent)
 
 void MoveToMushroom::Update(Raven& agent, float deltaTime)
 {
-	if (agent.position.x == agent.GetTargetDestination().x && agent.position.y == agent.GetTargetDestination().y)
+	float distToTarget = X::Math::Magnitude(agent.position - agent.GetTargetDestination());
+	if (distToTarget <= 10.0f)
 	{
-			agent.setState(ravenStates::HarvestMushroom);
+			agent.changeState(ravenStates::HarvestMushroom);
 		
 	}
 }
@@ -105,7 +119,7 @@ void HarvestMushroom::Update(Raven& agent, float deltaTime)
 	if (agent.getHarvested() == true)
 	{
 		agent.setHarvested(false);
-		agent.setState(ravenStates::SearchForMushroom);
+		agent.changeState(ravenStates::SearchForMushroom);
 	}
 	
 	

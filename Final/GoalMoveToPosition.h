@@ -21,5 +21,6 @@ public:
 private:
 	X::Math::Vector2 mDestination;
 	X::Math::Vector2 startPos;
+	X::Math::Vector2 endPos;
 
 };

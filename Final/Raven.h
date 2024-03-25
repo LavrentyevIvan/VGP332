@@ -3,8 +3,8 @@
 #include <AI.h>
 #include "TileMap.h"
 class VisualSensor;
-
-enum class ravenStates {
+enum class ravenStates
+{
 	GoHome,
 	SearchForMushroom,
 	MoveToMushroom,
@@ -40,10 +40,12 @@ public:
 	TileMap* ravenTilemap;
 	int* ptrHomeStorage;
 
-	void setState(ravenStates newState);
+	void changeState(ravenStates newState);
 	ravenStates getState() { return currentState; }
 
-	void DepositMushrooms(int ravenMushrooms);
+
+	int DepositMushrooms(int ravenMushrooms);
+	void resetMushrooms();
 
 	void setHarvested(bool onHarvest);
 	

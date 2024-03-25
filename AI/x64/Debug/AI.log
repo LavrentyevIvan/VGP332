@@ -5,8 +5,10 @@
   DFS.cpp
   Dijkstra.cpp
   Entity.cpp
-C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\AI\Src\Entity.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\AI\Src\Entity.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   GridBasedGraph.cpp
+  (compiling source file '/Src/Entity.cpp')
+  
   GroupBehaviour.cpp
   PerceptionModule.cpp
   PursuitBehaviour.cpp
@@ -14,4 +16,4 @@ C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\AI\Src\Entity.c
   SteeringModule.cpp
   WanderBehaviour.cpp
   Generating Code...
-  AI.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\x64\Debug\AI.lib
+  AI.vcxproj -> C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\x64\Debug\AI.lib

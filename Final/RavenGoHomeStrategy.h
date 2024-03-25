@@ -11,5 +11,5 @@ public:
 	std::unique_ptr<AI::Goal<Raven>> CreateGoal() const override;
 
 private:
-	const X::Math::Vector2 home = { 15,15 };
+	const X::Math::Vector2 home = { 50,50 };
 }; 

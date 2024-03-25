@@ -4,7 +4,7 @@ float RavenGoHomeStrategy::CalculateDesirability(Raven& agent) const
 {
     if (agent.getState() == ravenStates::GoHome)
     {
-        return 1000.0f;
+        return 10000.0f;
     }
     else 
     {

@@ -23,14 +23,14 @@ X::Math::Vector2 position;
 Path path;
 TileMap tileMap;
 
-
+float mushroomTimer = 0;
 
 
 //Part 2 Agent
 
 int randX;
 int randY;
-float viewRange = 500.0f;
+float viewRange = 200.0f;
 float viewAngle = 45.0f;
 float radius = 50.0f;
 bool isValidTile = false;
@@ -57,10 +57,10 @@ void SpawnRaven()
 	auto& agent = ravenAgents.emplace_back(std::make_unique<Raven>(aiWorld));
 
 	agent->ravenTilemap = &tileMap;
-	agent->ptrHomeStorage = &homeStorage;
 
 
 	agent->Load();
+	agent->setTimer(10.0f);
 	const float screenWidth = X::GetScreenWidth();
 	const float screenHeight = X::GetScreenHeight();
 	agent->position = X::Math::Vector2{ 120, 120 };
@@ -87,7 +87,7 @@ void GameInit()
 	tileMap.LoadTiles("tiles.txt");
 	tileMap.LoadMap("map.txt");
 	aiWorld.Initialize();
-
+	mushroomTimer = 10;
 	srand(time(nullptr));
 
 	//Spawn mushrooms
@@ -115,28 +115,64 @@ void GameInit()
 
 bool GameLoop(float deltaTime)
 {
+	mushroomTimer -= 1.0f * deltaTime;
+
+	if (mushroomTimer <= 0)
+	{
+		for (uint32_t i = 0; i < 10; ++i)
+		{
+			auto& mineral = minerals.emplace_back(std::make_unique<Mineral>(aiWorld));
+			mineral->Initialize();
+
+			isValidTile = false;
+			while (!isValidTile)
+			{
+				randX = rand() % tileMap.getRows();
+				randY = rand() % tileMap.getColumns();
+
+				if (!tileMap.IsBlocked(randX, randY))
+				{
+					isValidTile = true;
+				}
+			}
+			mineral->position = tileMap.GetPixelPosition(randX, randY);
+
+		}
+		mushroomTimer = 10;
+	}
+	
+
+
 	ImGui::Begin("Final", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 	{
+		
 
-	}
 
-	tileMap.Render();
 
-	if (ImGui::Button("SpawnRaven"))
-	{
-		SpawnRaven();
-	}
-	if (ImGui::Button("KillRaven"))
-	{
-		KillRaven();
-	}
+		tileMap.Render();
 
-	if (ImGui::Checkbox("ShowDebug", &showDebug))
-	{
-		for (auto& agent : ravenAgents)
+		if (ImGui::Button("SpawnRaven"))
 		{
-			agent->ShowDebug(showDebug);
+			SpawnRaven();
 		}
+		if (ImGui::Button("KillRaven"))
+		{
+			KillRaven();
+		}
+		ImGui::SameLine();
+		ImGui::Text("Mushroom Spawn Timer %f", mushroomTimer);
+		ImGui::SameLine();
+		ImGui::Text("Mushrooms Collected %d", homeStorage);
+			for (auto& agent : ravenAgents)
+			{
+				agent->ShowDebug(showDebug);
+				
+				ImGui::SameLine();
+				ImGui::Text("Agent timer: %f", agent->getTimer());
+
+			//	float timer1 = agent->getTimer();
+			}
+
 	}
 	ImGui::End();
 	aiWorld.Update();

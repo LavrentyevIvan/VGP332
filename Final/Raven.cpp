@@ -12,6 +12,7 @@
 
 extern float viewRange;
 extern float viewAngle;
+extern int homeStorage;
 
 namespace
 {
@@ -59,22 +60,11 @@ Raven::Raven(AI::AIWorld& world)
 
 void Raven::Load()
 {
-	timer = 10.0f;
+
 	mPerceptionModule = std::make_unique<AI::PerceptionModule>(*this, ComputeImportance);
 	mPerceptionModule->SetMemorySpan(3.0f);
 	mVisualSensor = mPerceptionModule->AddSensor<VisualSensor>();
 	mVisualSensor->targetType = AgentType::Mineral;
-	rStateMachine.Initialize(this);
-	rStateMachine.AddState<GoHome>();
-	rStateMachine.AddState<SearchForMushroom>();
-	rStateMachine.AddState<MoveToMushroom>();
-	rStateMachine.AddState<HarvestMushroom>();
-	setState(ravenStates::SearchForMushroom);
-
-	mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
-	
-	mSeekBehaviour = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
-	mArriveBehaviour = mSteeringModule->AddBehaviour<AI::ArriveBehaviour>();
 
 	mDecisionModule = std::make_unique<AI::DecisionModule<Raven>>(*this);
 	mDecisionModule->AddStrategy<RavenGoHomeStrategy>();
@@ -83,12 +73,29 @@ void Raven::Load()
 	strategy->SetPerception(mPerceptionModule.get());
 	mDecisionModule->AddStrategy<RavenHarvestStrategy>();
 
+	rStateMachine.Initialize(this);
+	rStateMachine.AddState<GoHome>();
+	rStateMachine.AddState<SearchForMushroom>();
+	rStateMachine.AddState<MoveToMushroom>();
+	rStateMachine.AddState<HarvestMushroom>();
+
+	changeState(ravenStates::SearchForMushroom);
+
+	mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
+	
+	mSeekBehaviour = mSteeringModule->AddBehaviour<AI::SeekBehaviour>();
+	mArriveBehaviour = mSteeringModule->AddBehaviour<AI::ArriveBehaviour>();
+
+	
+
 	for (int i = 0; i < mTextureIds.size(); ++i)
 	{
 		char name[128];
 		sprintf_s(name, "interceptor_%02i.png", i + 1);
 		mTextureIds[i] = X::LoadTexture(name);
 	}
+
+
 }
 
 void Raven::Unload()
@@ -97,7 +104,10 @@ void Raven::Unload()
 
 void Raven::Update(float deltaTime)
 {
-	timer -= 1*deltaTime;
+
+		
+	
+	
 
 	mVisualSensor->viewRange = viewRange;
 	mVisualSensor->viewHalfAngle = viewAngle * X::Math::kDegToRad;
@@ -114,6 +124,8 @@ void Raven::Update(float deltaTime)
 	{
 		heading = X::Math::Normalize(velocity);
 	}
+
+	timer-=1.0f*deltaTime;
 
 	position += velocity * deltaTime;
 
@@ -175,14 +187,23 @@ void Raven::CollectMushroom()
 	collectedMushrooms += 1;
 }
 
-void Raven::setState(ravenStates newState)
+
+void Raven::changeState(ravenStates newState)
 {
 	rStateMachine.ChangeState((int)newState);
+	currentState = newState;
 }
 
-void Raven::DepositMushrooms(int ravenMushrooms)
+int Raven::DepositMushrooms(int ravenMushrooms)
 {
-	ptrHomeStorage += ravenMushrooms;
+	homeStorage += ravenMushrooms;
+	ravenMushrooms = 0;
+	return ravenMushrooms;
+}
+
+void Raven::resetMushrooms()
+{
+	collectedMushrooms = 0;
 }
 
 void Raven::setHarvested(bool onHarvest)

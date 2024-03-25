@@ -3,3 +3,5 @@ C:\Users\LCV2242552\Desktop\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x
 C:\Users\LCV2242552\Documents\GitHub\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
 C:\Users\ilavr\OneDrive\Desktop\La Salle College Classes Year 2 Hopeless but not Lost\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
 C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332Ivan\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\X\External\DirectXTK\Audio\Bin\Desktop_2019\x64\Debug\DirectXTKAudioWin8.lib

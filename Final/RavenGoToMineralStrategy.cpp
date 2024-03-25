@@ -10,12 +10,13 @@ void RavenGoToMineralStrategy::SetPerception(const AI::PerceptionModule* percept
 
 float RavenGoToMineralStrategy::CalculateDesirability(Raven& agent) const
 {
-	if (agent.getState() == ravenStates::MoveToMushroom)
-	{
+	/*if (agent.getState() == ravenStates::MoveToMushroom)
+	{*/
 
 	
 	const auto& memoryRecords = mPerception->GetMemoryRecords();
 	float highestImportance = 0.0f;
+	X::Math::Vector2 targetDestination = X::Math::Vector2::Zero();
 	for (auto& record : memoryRecords)
 	{
 		AgentType agentType = static_cast<AgentType>(record.GetProperty<int>("type", 0));
@@ -24,23 +25,15 @@ float RavenGoToMineralStrategy::CalculateDesirability(Raven& agent) const
 			if (record.importance > highestImportance)
 			{
 				highestImportance = record.importance;
-				const AI::EntityPtrs entities = agent.world.GetEntities();
-				for (AI::Entity* entity : entities)
-				{
-					if (entity->GetUniqueId() == record.uniqueId)
-					{
-						agent.SetTarget(entity);
-					}
-				}
 			}
 		}
 	}
 	return highestImportance;
-	}
-	else
-	{
-		return 0.0f;
-	}
+	//}
+	//else
+	//{
+	//	return 0.0f;
+	//}
 }
 
 std::unique_ptr<AI::Goal<Raven>> RavenGoToMineralStrategy::CreateGoal() const

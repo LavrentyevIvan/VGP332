@@ -288,7 +288,7 @@ Path TileMap::FindPathAStar(int startX, int startY, int endX, int endY)
 		{
 			if (node->column != neightbor->column && node->row != neightbor->row)
 			{
-				return 5.0f;
+				return 1.5f;
 			}
 			return 1.0f;
 		};

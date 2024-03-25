@@ -1,2 +1,41 @@
-﻿  RavenStrategy.cpp
-  Final.vcxproj -> C:\Users\ilavr\Desktop\LaSalle Classes\2024-Winter\VGP332\VGP332\x64\Debug\Final.exe
+﻿  GoalArriveAtPosition.cpp
+  GoalHarvestMineral.cpp
+  GoalMoveToPosition.cpp
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\GoalMoveToPosition.cpp(19,88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\GoalMoveToPosition.cpp(19,78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\GoalMoveToPosition.cpp(19,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\GoalMoveToPosition.cpp(19,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GoalSeekToPosition.cpp
+  GoalWander.cpp
+  Mineral.cpp
+  Raven.cpp
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\Raven.cpp(132,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\Raven.cpp(132,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\Raven.cpp(133,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\Raven.cpp(133,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+  RavenGoHomeStrategy.cpp
+  RavenGoToMineralStrategy.cpp
+  RavenHarvestStrategy.cpp
+  RavenHuntStrategy.cpp
+  RavenStates.cpp
+  RavenStrategy.cpp
+  SCV.cpp
+  TileMap.cpp
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(298,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(299,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(307,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(308,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(315,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\TileMap.cpp(316,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  VisualSensor.cpp
+  WinMain.cpp
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(10,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(64,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(64,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(65,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(65,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\Final\WinMain.cpp(91,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+     Creating library C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\x64\Debug\Final.lib and object C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\x64\Debug\Final.exp
+  Final.vcxproj -> C:\Users\tlacu\Desktop\GameDev\Personal\VGP332L\VGP332\x64\Debug\Final.exe

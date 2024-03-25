@@ -13,20 +13,22 @@ void GoalMoveToPosition::Activate(Raven& agent)
 	RemoveAllSubGoals(agent);
 
 	startPos = agent.ravenTilemap->GetTilePosition(agent.position);
-	//mDestination = agent.ravenTilemap->GetTilePosition(X::Math::Vector2{200,200});
+	endPos = agent.ravenTilemap->GetTilePosition(mDestination);
+	agent.SetTargetDestination(mDestination);
 
-	Path path = agent.ravenTilemap->FindPathAStar(startPos.x, startPos.y, mDestination.x, mDestination.y);
+	Path path = agent.ravenTilemap->FindPathAStar(startPos.x, startPos.y, endPos.x, endPos.y);
 
 	for (int i = 0; i < path.size(); ++i)
 	{
-		if (i < path.size() - 1) {
-		GoalSeekToPosition* seek = AddSubGoal<GoalSeekToPosition>();
-		seek->SetDestination(path[i]);
+		if (i == path.size()) {
+			GoalArriveAtPosition* arrive = AddSubGoal<GoalArriveAtPosition>();
+			arrive->SetDestination(path[i]);
 		}
 		else
 		{
-			GoalArriveAtPosition* arrive = AddSubGoal<GoalArriveAtPosition>();
-			arrive->SetDestination(path[i]);
+			
+			GoalSeekToPosition* seek = AddSubGoal<GoalSeekToPosition>();
+			seek->SetDestination(path[i]);
 		}
 	}
 	
@@ -44,6 +46,8 @@ GoalMoveToPosition::Status GoalMoveToPosition::Process(Raven& agent)
 void GoalMoveToPosition::Terminate(Raven& agent)
 {
 	RemoveAllSubGoals(agent);
+	mStatus = GoalMoveToPosition::Status::Inactive;
+
 }
 
 void GoalMoveToPosition::SetDestination(const X::Math::Vector2& destination)
